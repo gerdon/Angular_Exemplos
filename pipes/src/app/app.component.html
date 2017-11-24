@@ -1,0 +1,11 @@
+<h1>Pipes</h1>
+
+<br>
+
+<h3>Livro</h3>
+<p>Titulo: {{ livro.titulo }} </p>
+<p>Estrelas: {{ livro.estrelas | number: '1.1-1'}} </p>
+<p>Pagínas: {{ livro.paginas | number}} </p>
+<p>Preço: {{ livro.preco | currency: 'BRL'}} </p>
+<p>Data Lançamento: {{ livro.dataLancamento | date: 'dd-MM-yyyy'}} </p>
+

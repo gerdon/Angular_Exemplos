@@ -1,0 +1,39 @@
+<h1>*ngIf</h1>
+
+<h3>Exemplo ngif com lista</h3>
+
+ <div *ngIf="cursos.length > 0" >
+  Lista de cursos
+  <div>
+    <ol>
+      <li *ngFor="let curso of cursos" >
+          {{ curso }}
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div *ngIf="cursos.length == 0" >
+    Não existem cursos para serem listados!
+</div>
+
+<h3>Exemplo ngif com boolean</h3>
+
+<div *ngIf="mostrarCursos" >
+  Lista de cursos
+  <div>
+      <ol>
+        <li *ngFor="let curso of cursos" >
+            {{ curso }}
+        </li>
+      </ol>
+    </div>
+</div>
+
+<div *ngIf="!mostrarCursos" >
+    Não existem cursos para serem listados!
+</div>
+
+<br>
+
+<button class="btn btn-primary" (click)="onMostrarCursos()">Mostrar cursos</button>
